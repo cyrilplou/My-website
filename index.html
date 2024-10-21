@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyril Plou - Développeur web</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preload">
+</head>
+<body id="body">
+    <!-- Section welcome pour Mobile -->
+    <section class="welcome-phone" id="welcome-phone">
+        <p>Ce site <span class="boldy">est interactif</span>. Certaines fonctionnalités ont été <span class="boldy">désactivé sur mobile</span>. Pour une expérience optimale, essayez sur ordinateur.</p>
+        
+        <button id="letsgo2"> J'ai compris !</button>
+    </section>
+
+    <!-- Section welcome pour Desktop -->
+
+    <section class="welcome" id="welcome">
+        <h1>Cyril Plou - Développeur web Fullstack</h1>
+        <h2>Bienvenue, mon site web2 est entièrement interactif. Plusieurs options s'offrent à vous :</h2>
+        <ul>
+            <li><span class="boldy">Pas de temps à perdre ?</span> Servez-vous du menu en haut de l'écran.</li>
+            <li><span class="boldy">Curieux de découvrir ?</span> Le bouton <span class="boldy">"i"</span> en bas à droite de votre écran vous révèle les éléments interactifs. Mais vous pouvez aussi les trouver par vous même.</li>
+        </ul>
+        <h3>Bonne visite !</h3>
+        <button id="letsgo">C'est parti !</button>
+    </section>
+    <div class="informations" id="informations">
+        <p>i</p>
+    </div>
+    
+    <img class="logo-contact" id="logo-contact" src="/images/logo-mail.webp" alt="logo mail">
+    
+    <header>
+        <h1>Cyril Plou - <span class="subtitle">Développeur web fullstack</span></h1>
+        <div class="menu-burger" id="menu-burger">
+            <div class="burger"></div>
+            <div class="burger"></div>
+            <div class="burger"></div>
+        </div>
+        <ul id="liste-menu">
+            <li id="accueil-btn">Accueil</li>
+            <li id="portfolio-btn">Portfolio</li>
+            <li id="quisuis-btn">Qui suis-je ?</li>
+            <li id="contact-btn">Contact</li>
+            <!-- <li>Autre</li> -->
+        </ul>
+    </header>
+
+    <section class="contact" id="contact">
+        <button class="btn-close-contact" id="close-contact">&Cross;</button>
+        <h3>Contacts</h3>
+        <div class="methode-contact">
+            <img class="img-mail" id="img-mail" src="/images/logo-mail.webp" alt="pictogramme d'un mail">
+            <a href="https://www.linkedin.com/in/cyril-plou/" target="_blank"><img class="img-phone" id="img-phone" src="/images/pictoLinkedin.webp" alt="pictrogramme d'un téléphone"></a>
+        </div>
+        <form action="contact.php" class="form" id="form" method="POST" >
+            <input type="text" placeholder="Votre mail" name="mail-ut" id="votremail">
+            <select name="sujet" id="votresujet" name="sujet">
+                <option value="Proposition de stage">Proposition de stage</option>
+                <option value="J'ai besoin d'un site web/appli web">J'ai besoin d'un site web/appli web</option>
+                <option value="Proposition CDI">Proposition CDI</option>
+                <option value="Autre">Autre</option>
+            </select>
+            <textarea name="message" id="votretexte"></textarea>
+            <input id="submitcontact" type="submit" name="envoyer">
+        </form>
+    </section>
+    <section class="aide" id="aide">
+        <img src="/images/Aide.webp" alt="logo d'aide">
+    </section>
+    
+    <section class="main" id="main">
+    
+          <section class="section1" id="section1">
+            <img class="tableau-phone" id="tableau-phone" src="/images/tableau.webp" alt="un tableau avec écrit Cyril Plou Développeur web">
+            <section class="Ssection1" id="Ssection1">
+
+            </section>
+            <section class="Ssection2" id="Ssection2">
+                <section class="cyrilinfos" id="cyril-infos">
+                    <button class="btn-close" id="close-infos">&Cross;</button>
+                    <img src="/images/image-cyril.webp" alt="photo de cyril">
+                    <p>Après 13 ans à travailler comme <span class="boldy">graphiste et Motiondesigner</span>, j'ai décidé de me reconvertir au métier de <span class="boldy">développeur web fullstack</span>. J'aime relever des défis au quotidien, me creuser la tête afin d'obtenir le résultat escompté. Le code remplit parfaitement ce rôle ! Je suis disponible pour vos projets de <span class="boldy">site ou d'application web</span> mais également pour des <span class="boldy">opportunités en CDI</span> au sein de votre entreprise. Contactez moi pour que l'on échange.</p>
+                    <h4>" Breaking News "</h4>
+                    <p>Actuellement en formation Développeur web & mobile Fullstack chez <span class="boldy">O'clock</span>, je suis à la <span class="boldy">recherche d'un stage</span> pour Mars 2025.</p>
+                    <button class="btn-echange" id="btn-echange">Echangeons</button>
+                </section>
+                <img src="/images/stack-fond.png" class="stackBG" id="stackBG" alt="">
+                <img class="display-stack" id="display-stack"  src="/images/ordi-stack.webp" alt="">
+                <div class="stack" id="stack">
+                    <img class="node" id="node"  src="/images/logonode.webp" alt="logo node">
+                    <img class="react" id="react"  src="/images/logo-php.webp" alt="logo react">
+                    <img class="html" id="html"  src="/images/logo-html.webp" alt="logo html">
+                    <img class="css"id="css" src="/images/logo-css.webp" alt="logo css">
+                    <img class="js"id="js" src="/images/logo-js2.webp" alt="logo css">
+                    <img class="php"id="php" src="/images/logoreact.webp" alt="logo php">
+                    <img class="figma"id="figma" src="/images/logofigma2.webp" alt="logo figma">
+                    <img class="adobe"id="adobe" src="/images/logo-adobe.webp" alt="logo adobe">
+                    <img class="visual"id="visual" src="/images/logovisualcode.webp" alt="logo visual code">
+                    <!-- <div class="close-stack" id="close-stack">&Cross;</div> -->
+                </div>
+                <div class="cyril" id="avatar-cyril">
+                    <img class="tete"  src="/images/Cyril-tete.webp" alt="personnage cyril">
+                    <a href=""id="tete"><img src="/images/Cyril.webp" alt="personnage cyril"></a>
+                </div>
+                </div>
+            </section>
+
+            <section class="Ssection3">
+                <img class="interrupteur" id="interrupteur" src="/images/interrupteur.webp" alt="image d'un interrupteur">
+                <div class="elements">
+                    <div class="social" id="social">
+                        <a href="https://www.linkedin.com/in/cyril-plou/" target="_blank" class="linkedin"><img src="/images/pictoLinkedin.webp" alt="logo linkedin"></a>
+                        <a href="https://github.com/cyrilplou" class="github"target="_blank" ><img src="/images/pictoGit.webp" alt="logo github"></a>
+                    </div>
+                  <img class="tableau-img" id="tableau" src="/images/tableau.webp" alt="un tableau avec écrit Cyril Plou Développeur web">
+                    
+                </div>
+                <img class="arcade" src="/images/arcade.webp" alt="une borne d'arcade">
+            </section>
+        </section>
+        
+        <section class="section2" id="section2">
+            <section class="left">
+
+            </section>
+            <section class="grid-portfolio">
+                <article class="un">
+                    <div class="header-port">
+                        <h3><span class="boldy">Hom-e</span>, 3 Appli en 1.</h3>
+                        
+                    </div>
+                    <div class="stack-port">
+                        <img class="lang-port"  src="/images/logo-html.webp" alt="logo html">
+                        <img class="lang-port" src="/images/logo-css.webp" alt="logo css">
+                        <img class="lang-port"src="/images/logo-js2.webp" alt="logo css">
+                        <img class="lang-port" src="/images/logo-php.webp" alt="logo php">
+                    </div>
+                    <img class="couv-port" src="/images/img-portfolio/home-mobile.png" alt="images de l'application météos">
+
+                </article>
+                <article class="deux">
+                    <div class="header-port">
+                        <h3><span class="boldy">Hom-e</span>, Desktop version</h3>        
+                    </div>
+                    <div class="stack-port">
+                        <img class="lang-port"  src="/images/logo-html.webp" alt="logo html">
+                        <img class="lang-port" src="/images/logo-css.webp" alt="logo css">
+                        <img class="lang-port"src="/images/logo-js2.webp" alt="logo css">
+                        <img class="lang-port" src="/images/logo-php.webp" alt="logo php">
+                    </div>
+                    <img class="couv-port" src="/images/img-portfolio/home-desktop.webp" alt="images de l'application météos">
+                </article>
+                <article class="trois">
+                    <div class="header-port">
+                        <h3><span class="boldy">Application Météo</span></h3>        
+                    </div>
+                    <div class="stack-port">
+                        <img class="lang-port"  src="/images/logo-html.webp" alt="logo html">
+                        <img class="lang-port" src="/images/logo-css.webp" alt="logo css">
+                        <img class="lang-port"src="/images/logo-js2.webp" alt="logo css">
+                        <img class="lang-port" src="/images/logo-php.webp" alt="logo php">
+                    </div>
+                    <img class="couv-port" src="/images/img-portfolio/meteo.png" alt="images de l'application météos">
+                </article>
+                
+                <article class="quatre">
+                    <div class="header-port">
+                        <h3><span class="boldy">La cuisine du Panda</span>, site culinaire asiatique.</h3>
+                    </div>
+                    <div class="stack-port">
+                        <img class="lang-port"  src="/images/logo-html.webp" alt="logo html">
+                        <img class="lang-port" src="/images/logo-css.webp" alt="logo css">
+                        <img class="lang-port"src="/images/logo-js2.webp" alt="logo css">
+                        <img class="lang-port" src="/images/logo-php.webp" alt="logo php">
+                    </div>
+                    <img class="couv-port" src="/images/img-portfolio/panda1.webp" alt="images de la cuisine du panda">
+                </article>
+
+               
+            </section>
+            <section class="back" id="back"></section>
+        </section> 
+    </section>
+    <footer><p>Cyril Plou - Tous droits réservés.</p></footer>
+</body>
+
+</html>

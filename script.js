@@ -339,3 +339,30 @@ btnwelcomePhone.addEventListener("click",()=>{
       btnInformation.classList.toggle("anim-burger")
       btnQui.classList.toggle("anim-burger")
    };
+
+
+   // Animation Slider //
+   const telecommande = document.getElementById("telecommande");
+   const imagesSlider = document.querySelectorAll(".portfolioimg")
+
+
+telecommande.addEventListener("click",()=>{
+   imagesSlider.forEach(element=>{
+      element.classList.add("slider")
+      telecommande.addEventListener("click",()=>{
+
+
+         imagesSlider.forEach(element=>{
+            element.classList.add("slider2")
+            telecommande.addEventListener("click",()=>{
+
+
+               imagesSlider.forEach(element=>{
+                  element.classList.add("slider3")
+                  
+               })
+            })
+         })
+      })
+   })
+})

@@ -816,7 +816,7 @@ header ul li {
     align-items: center;
     display: flex;
     flex-direction: row;
-    background-image: url(/images/salle2.jpg);
+    background-image: url(/images/salle2v2.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
@@ -834,147 +834,74 @@ header ul li {
     align-items: center;
     display: flex;
     flex-direction: row;
-    background-image: url(/images/salle2-nuit.webp);
+    background-image: url(/images/salle2nuitv2.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
 }
 
-.grid-portfolio{
-
-    width: 80%;
-    max-width: 950px;
-    height: 60vh;
-    display: grid;
-    gap: 1rem;
+.carrousel{
+    width: 70vw;
+    height: 70vh;
     margin-bottom: 20vh;
-    margin-left: 2rem;
-    justify-content: center;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(5,1fr);
-    filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.644));
-}
-.un{
-
-    grid-column-start: 1 ;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 7;
-    overflow: hidden;
-    position: relative;
-}
-.un .couv-port{
-    height: 80%;
-    width: auto;
-    
-}
-.deux{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    overflow: hidden;
-    position: relative;
-}
-.deux .couv-port{
-    width: 100%;
-    margin-top: -1rem;
-}
-.trois{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    overflow: hidden;
-    position: relative;
-}
-.trois .couv-port{
-    width: 100%;
-    margin-top: -1rem;
-    border-radius: 20px;
-}
-.quatre {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 7;
-    overflow: hidden;
-    position: relative;
-
-
-
-}
-
-.quatre .stack-port img{
-    margin-top: 0.5rem;
-
-}
-.quatre .couv-port{
-    width: 100%;
-    margin-top: -1rem;
-    border-radius: 20px;
-}
-.couv-port{
-width: 100%;
-position: relative;
-margin-top: auto;
-margin-bottom: auto;
-z-index: 0;
-
-
-}
-.grid-portfolio article{
-    background-color: rgba(255, 255, 255, 0.884);
-    border-radius: 1rem;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.header-port{
-    width: 100%;
-    max-height: 2rem;
-    padding: 0.6rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0px 0px;
-    height: 25%;
-    background-color: rgb(33, 87, 79);
-    z-index: 2;
-}
-.grid-portfolio article h3{
-  
-    margin-top: 0px;
-    width: 100%;
-    margin-bottom: 0px;
-    font-weight: 200;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    flex-wrap: wrap;
-}
-.stack-port{
-    width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    gap: 10rem;
+    overflow: hidden;
+}
+.carrousel img{
+    margin-left: 15%;
+}
+.telecommande{
     position: absolute;
-    padding : 0px 5px ;
-    bottom: 0px;
-    background-color: white;
-    z-index: 1;
+    left: 40vw;
+    bottom: 13vh;
+    width: 250px;
+    height: 100px;
+    cursor: pointer;
 }
-.lang-port{
-    width: 1.5rem;
-    z-index: 0;
-    margin: 4px 0px;
-
+.slider{
+    animation-name: slide;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
-
+@keyframes slide{
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(-65vw)
+    }
+}
+.slider2{
+    animation-name: slide2;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes slide2{
+    0%{
+        transform: translateX(-65vw);
+    }
+    100%{
+        transform: translateX(-130vw)
+    }
+}
+.slider3{
+    animation-name: slide3;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes slide3{
+    0%{
+        transform: translateX(-130vw);
+    }
+    100%{
+        transform: translateX(0px)
+    }
+}
 .back{
     width: 20vw;
     height: 100vh;
@@ -1247,6 +1174,7 @@ footer{
         
     
     }
+    
     .stack-no-bounce{
         width:12% ;
         height: 12%;
@@ -1261,6 +1189,7 @@ footer{
         transition: 1000ms;
 
     }
+    
     .stack-no-bounce img{
         transition: 1000ms;
         width: 5vh;
@@ -1302,6 +1231,61 @@ footer{
 
     
     }
+    .carrousel{
+        width: 70vw;
+        height: 70vh;
+        margin-bottom: 20vh;
+        display: flex;
+        flex-direction: row;
+        gap: 10rem;
+        overflow: hidden;
+    }
+    .carrousel img{
+        margin-left: 5rem;
+        transform: translateX(150px);
+    }
+    .slider{
+        animation-name: slide;
+        animation-duration: 1000ms;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    @keyframes slide{
+        0%{
+            transform: translateX(150px);
+        }
+        100%{
+            transform: translateX(-47vw)
+        }
+    }
+    .slider2{
+        animation-name: slide2;
+        animation-duration: 1000ms;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    @keyframes slide2{
+        0%{
+            transform: translateX(-47vw);
+        }
+        100%{
+            transform: translateX(-100vw)
+        }
+    }
+    .slider3{
+        animation-name: slide3;
+        animation-duration: 1000ms;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    @keyframes slide3{
+        0%{
+            transform: translateX(-100vw);
+        }
+        100%{
+            transform: translateX(150px)
+        }
+    }
 }
 @media (800px< width <1000px){
     .interrupteur{
@@ -1317,6 +1301,7 @@ footer{
     .informations{
         display: none;
     }
+    
     .main{
         margin: 0px;
         padding-left: 40%;
@@ -2131,7 +2116,7 @@ footer{
         justify-content: center;
         align-items: center;
         display: flex;
-        background-image: url(/images/salle2.jpg);
+        background-image: url(/images/salle2v2.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position-x: center;

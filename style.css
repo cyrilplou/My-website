@@ -80,7 +80,7 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 3rem;
-    border: dashed 3px rgb(33, 80, 92);
+    border: dashed 3px #21505c;
     background-color: rgba(255, 255, 255, 0.445);
 }
 .aide img {
@@ -145,7 +145,7 @@ header ul li {
     margin: 0px 20px;
     font-size: 1.3rem;
     font-weight: 600;
-    color: rgb(36, 116, 136);
+    color: #247488;
     cursor: pointer;
 }
 .menu-burger{

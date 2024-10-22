@@ -264,19 +264,6 @@ header ul li {
 }
 /* Ecran stack et anim */
 
-.stackBG{
-    width: 23%;
-    margin-left: 10vw;
-    margin-bottom: -2vh;
-    margin-right: 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    z-index: 999;
-    animation-name: bounceStack;
-    animation-duration: 4000ms;
-    animation-iteration-count: infinite;
-}
 .display-stack{
 
     width: 23%;

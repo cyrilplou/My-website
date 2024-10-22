@@ -239,6 +239,15 @@ submitcontact.style.display="none";
 logocontact.addEventListener("click",()=>{
    contactSection.style.display="";
    cyrilinfos.style.display="none";
+   btncss.style.display="none";
+   btnhtml.style.display="none";
+   btnjs.style.display="none";
+   btnphp.style.display="none";
+   figma.style.display="none";
+   adobe.style.display="none";
+   visual.style.display="none";
+   react.style.display='none';
+   node.style.display='none';
 
 })
 
@@ -247,6 +256,15 @@ logocontact.addEventListener("click",()=>{
 btnContact.addEventListener("click",()=>{
    contactSection.style.display="";
    cyrilinfos.style.display="none";
+   btncss.style.display="none";
+   btnhtml.style.display="none";
+   btnjs.style.display="none";
+   btnphp.style.display="none";
+   figma.style.display="none";
+   adobe.style.display="none";
+   visual.style.display="none";
+   react.style.display='none';
+   node.style.display='none';
    hideBurger()
 })
 

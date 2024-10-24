@@ -3,6 +3,7 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
+
 @media (width>800px){
 
 body{
@@ -2035,7 +2036,7 @@ footer{
         transition-duration: 1000ms;
     }
     .socialAnimphone{
-        transform: translateY(-80px);
+        transform: translateY(-110px);
         transition-duration: 1000ms;
     }
     .linkedin:hover{
@@ -2241,15 +2242,15 @@ footer{
         filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.644));
     }
     .btn-close {
-        width: 3rem;
-        height: 3rem;
+        width: 2rem;
+        height: 2rem;
         border-radius: 1rem;
         border: solid 2px white ;
         left: 2rem;
-        top: 4rem;
+        top: 5rem;
         background-color: rgba(32, 93, 95, 0.884);
         color: white;
-        font-size: 2rem;
+        font-size: 1.5rem;
         position: fixed;
         z-index: 99999999;
     }

@@ -1,6 +1,5 @@
 <?php
 
-$votre_adresse_mail = 'cyril.plou@gmail.com ';
 // si le bouton "Envoyer" est cliqué
 if(isset($_POST['envoyer'])){
   

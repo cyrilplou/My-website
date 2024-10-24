@@ -71,6 +71,9 @@ body{
 }
 
 /* Bouton d'aide interactif et bouton mail bottom right */
+.aidemobile{
+    display: none;
+}
 .aide {
     width: 90vw;
     height: 80vh;
@@ -235,8 +238,9 @@ header ul li {
 }
 
 .informations{
-    width: 2.5rem;
+    width: auto;
     height: 2.5rem;
+    padding: 2px 3px;
     z-index: 99;
     position: absolute;
     bottom: 2rem;
@@ -248,7 +252,7 @@ header ul li {
     align-items: center;
     z-index: 9999999;
     background-color: rgb(149, 187, 77);
-    border-radius: 30px;
+    border-radius: 5px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.575);
     cursor: pointer;
 }
@@ -259,8 +263,10 @@ header ul li {
 
 .informations p {
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 800;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.632));
+
 }
 /* Ecran stack et anim */
 
@@ -537,6 +543,9 @@ header ul li {
     display: flex;
     flex-direction: row;
 }
+.socialphone{
+display: none;
+}
 .social{
     display: flex;
     flex-direction: column;
@@ -564,6 +573,7 @@ header ul li {
 .tableau-phone{
     display: none;
 }
+
 .tableau{
     margin-bottom: 0px;
     margin-right: 8rem;
@@ -839,7 +849,9 @@ header ul li {
     background-size: cover;
     background-position-x: center;
 }
-
+.carrouselPhone{
+    display: none;
+}
 .carrousel{
     width: 70vw;
     height: 70vh;
@@ -850,7 +862,8 @@ header ul li {
     overflow: hidden;
 }
 .carrousel img{
-    margin-left: 15%;
+    margin-left: 10%;
+
 }
 .telecommande{
     position: absolute;
@@ -859,6 +872,37 @@ header ul li {
     width: 250px;
     height: 100px;
     cursor: pointer;
+
+}
+.proj{
+    position: absolute;
+    left: 50vw;
+    bottom: 12vh;
+    width: auto;
+    font-weight: 800;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    background-color: #21505c;
+    color: white;
+    font-size: 2rem;
+    animation-name: animProj;
+    animation-duration: 3000ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes animProj{
+    0%{
+        transform: translateY(250px);
+
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.sliderOpacity{
+    transition-duration: 1000ms;
+    opacity: 0;
 }
 .slider{
     animation-name: slide;
@@ -1241,7 +1285,64 @@ footer{
         overflow: hidden;
     }
     .carrousel img{
-        margin-left: 5rem;
+        margin-left: 10rem;
+        transform: translateX(150px);
+    }
+    .slider{
+        animation-name: slide;
+        animation-duration: 1000ms;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    @keyframes slide{
+        0%{
+            transform: translateX(150px);
+        }
+        100%{
+            transform: translateX(-55vw)
+        }
+    }
+    .slider2{
+        animation-name: slide2;
+        animation-duration: 1000ms;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    @keyframes slide2{
+        0%{
+            transform: translateX(-55vw);
+        }
+        100%{
+            transform: translateX(-110vw)
+        }
+    }
+    .slider3{
+        animation-name: slide3;
+        animation-duration: 1000ms;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    @keyframes slide3{
+        0%{
+            transform: translateX(-100vw);
+        }
+        100%{
+            transform: translateX(150px)
+        }
+    }
+}
+@media (2000px< width){
+    .carrousel{
+        width: 70vw;
+        height: 70vh;
+        margin-bottom: 20vh;
+        display: flex;
+        flex-direction: row;
+        gap: 10rem;
+        overflow: hidden;
+    }
+    .carrousel img{
+        margin-left: 10rem;
         transform: translateX(150px);
     }
     .slider{
@@ -1358,7 +1459,45 @@ footer{
         overflow: hidden;
     
     }
+    .carrousel{
+        display: none;
+    }
+    .carrouselPhone{
+        width: 100vw;
+        height: 70vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        gap: 4rem;
+        margin-bottom: 20vh;
+        overflow: hidden;
+    }
+    .carrouselPhone img{
+        margin-left: 2rem;
+        width: 80%;
+        filter: drop-shadow(2px 2px 5px black);
+        transition: 1000ms;
 
+    }
+    .sliderPhone{
+        translate: -100vw;
+        transition-duration: 1000ms;
+    }
+    .sliderPhone2{
+        translate: -200vw;
+        transition-duration: 1000ms;
+    }
+    /* @keyframes slide{
+        0%{
+            transform: translateX(0px);
+        }
+        100%{
+            transform: translateX(-400px)
+        }
+    } */
+    .proj{
+        display: none;
+    }
     /* Message de bienvenue */
     .welcome{
         display: none;
@@ -1402,7 +1541,7 @@ footer{
     }
     
     /* Bouton d'aide interactif et bouton mail bottom right */
-    .aide {
+    .aidemobile{
         width: 90vw;
         height: 80vh;
         position: absolute;
@@ -1414,10 +1553,14 @@ footer{
         border: dashed 3px rgb(33, 80, 92);
         background-color: rgba(255, 255, 255, 0.445);
     }
-    .aide img {
+    .aidemobile img{
         width: 100%;
-        z-index: 9999;
+        margin-top: 6rem;
     }
+    .aide {
+       display: none;
+    }
+   
     .logo-contact{
         width: 4rem;
         height: 4rem;
@@ -1602,7 +1745,31 @@ footer{
     }
     
     .informations{
-       display: none;
+        width: auto;
+        height: 2rem;
+        padding: 0px 5px;
+        z-index: 99;
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999999;
+        background-color: rgb(149, 187, 77);
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.575);
+        cursor: pointer;
+    }
+    
+    
+    .informations p {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 800;
+        filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.632));
     }
     
    
@@ -1855,16 +2022,18 @@ footer{
         display: flex;
         flex-direction: row;
     }
-    .social{
+    .socialphone{
         display: flex;
-        flex-direction: column;
+        position: absolute;
+        flex-direction:row;
         justify-content: center;
-        transform: translateX(100px);
+        transform: translateY(-180px);
         z-index: 0;
+        gap: 2rem;
         transition-duration: 1000ms;
     }
-    .socialAnim{
-        transform: translateX(-30px);
+    .socialAnimphone{
+        transform: translateY(-80px);
         transition-duration: 1000ms;
     }
     .linkedin:hover{
@@ -1885,8 +2054,15 @@ footer{
         margin-bottom: 0px;
         position: absolute;
         top: 10%;
+        z-index: 1;
     }
- 
+    .tableau-phone-anim{
+        animation-name: tableau;
+        animation-duration: 2000ms;
+        animation-timing-function: ease-in-out;
+        animation-direction: normal;
+        animation-play-state: running;
+    }
     .arcade{
         max-width: 60%;
         min-width: 180px;
@@ -2054,7 +2230,7 @@ footer{
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 2rem;
-        height: 2rem;
+        height: 4rem;
         border-radius: 5px;
         border: none;
         font-size: 1rem;
@@ -2067,12 +2243,12 @@ footer{
         height: 3rem;
         border-radius: 1rem;
         border: solid 2px white ;
-        left: 1rem;
-        top: 1rem;
+        left: 2rem;
+        top: 4rem;
         background-color: rgba(32, 93, 95, 0.884);
         color: white;
         font-size: 2rem;
-        position: relative;
+        position: fixed;
         z-index: 99999999;
     }
     .btn-close:hover{

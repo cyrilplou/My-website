@@ -90,12 +90,20 @@ stack.addEventListener("click",()=>{
 //Animation Tableau //
 
 const btnsocial = document.getElementById("social")
+const btnsocialphone = document.getElementById("socialphone")
+
 const tableau =document.getElementById("tableau")
+const tableauPhone =document.getElementById("tableau-phone")
+
 
 tableau.addEventListener("mouseenter",()=>{
     btnsocial.classList.add("socialAnim")
 })
-
+tableauPhone.addEventListener("click",()=>{
+   btnsocialphone.classList.add("socialAnimphone")
+   tableauPhone.classList.add("tableau-phone-anim")
+   stack.style.display="none"
+})
 
 
 
@@ -112,6 +120,7 @@ Ssection1.addEventListener("click",()=>{
     main.classList.remove("scrollUp")
     btnInformation.style.display="none";
 
+
 })
 back.addEventListener("click",()=>{
    main.classList.toggle("scrollDown")
@@ -125,6 +134,7 @@ btnPortfolio.addEventListener("click",()=>{
     main.classList.remove("scrollUp")
     btnInformation.style.display="none";
     hideBurger()
+    
 })
 btnAccueil.addEventListener("click",()=>{
    main.classList.toggle("scrollDown")
@@ -139,15 +149,19 @@ btnAccueil.addEventListener("click",()=>{
 // Helper //
 const btnInformation = document.getElementById("informations");
 const screenAide = document.getElementById("aide");
+const screenAidemobile = document.getElementById("aidemobile");
 
 screenAide.style.display="none";
+screenAidemobile.style.display="none";
 
 btnInformation.addEventListener('mouseover',()=>{
    screenAide.style.display="";
+   screenAidemobile.style.display="";
 
 })
 btnInformation.addEventListener('mouseleave',()=>{
    screenAide.style.display="none";
+   screenAidemobile.style.display="none";
 
 })
 
@@ -344,19 +358,32 @@ btnwelcomePhone.addEventListener("click",()=>{
    // Animation Slider //
    const telecommande = document.getElementById("telecommande");
    const imagesSlider = document.querySelectorAll(".portfolioimg")
+   const homi= document.getElementById("homi")
+   const panda= document.getElementById("panda")
+   const meteo= document.getElementById("meteo")
+panda.classList.add("sliderOpacity");
 
-
+   homi.addEventListener("click",()=>{
+      window.location = "https://github.com/cyrilplou/Home-Companion"
+   })
+   homiP.addEventListener("click",()=>{
+      window.location = "https://github.com/cyrilplou/Home-Companion"
+   })
 telecommande.addEventListener("click",()=>{
    imagesSlider.forEach(element=>{
       element.classList.add("slider")
+      panda.classList.remove("sliderOpacity");
+      meteo.classList.add("sliderOpacity");
+      homi.classList.add("sliderOpacity");
       telecommande.addEventListener("click",()=>{
-
-
+         panda.classList.add("sliderOpacity");
+         meteo.classList.remove("sliderOpacity");
          imagesSlider.forEach(element=>{
             element.classList.add("slider2")
             telecommande.addEventListener("click",()=>{
-
-
+               homi.classList.remove("sliderOpacity");
+               meteo.classList.remove("sliderOpacity");
+               panda.classList.remove("sliderOpacity");
                imagesSlider.forEach(element=>{
                   element.classList.add("slider3")
                   
@@ -366,3 +393,80 @@ telecommande.addEventListener("click",()=>{
       })
    })
 })
+
+
+// Swipe Phone 
+const imagesSliderPhone = document.getElementById("carrouselPhone")
+const homiP= document.getElementById("homiP")
+const pandaP= document.getElementById("pandaP")
+const meteoP= document.getElementById("meteoP")
+
+imagesSliderPhone.addEventListener('touchstart', handleTouchStart, false);        
+imagesSliderPhone.addEventListener('touchmove', handleTouchMove, false);
+
+let xDown = null;                                                        
+let yDown = null;
+
+function getTouches(evt) {
+  return evt.touches ||             // browser API
+         evt.originalEvent.touches; // jQuery
+}                                                     
+                                                                         
+function handleTouchStart(evt) {
+    const firstTouch = getTouches(evt)[0];                                      
+    xDown = firstTouch.clientX;                                      
+    yDown = firstTouch.clientY;                                      
+};                                                
+let i = 0;                                                                      
+function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+   let xUp = evt.touches[0].clientX;                                    
+   let yUp = evt.touches[0].clientY;
+
+    let xDiff = xDown - xUp;
+    let yDiff = yDown - yUp;
+                                                                   
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0) {
+         i++
+         if(i<=1){
+         console.log("1erswap")
+         homiP.classList.add("sliderPhone")
+         pandaP.classList.add("sliderPhone")
+         meteoP.classList.add("sliderPhone")
+         console.log(i)
+         }
+         if ( i>1 ) {
+            console.log("deuxieme swap")
+            homiP.classList.add("sliderPhone2")
+            pandaP.classList.add("sliderPhone2")
+            meteoP.classList.add("sliderPhone2")
+            console.log(`deuxieme ${i}`)
+            i=0;
+         } 
+         } 
+         
+ 
+      else {
+         homiP.classList.remove("sliderPhone")
+         pandaP.classList.remove("sliderPhone")
+         homiP.classList.remove("sliderPhone2")
+         pandaP.classList.remove("sliderPhone2")
+         meteoP.classList.remove("sliderPhone")
+         meteoP.classList.remove("sliderPhone2")
+      }                       
+    } else {
+        if ( yDiff > 0 ) {
+            /* down swipe */ 
+        } else { 
+            /* up swipe */
+        }                                                                 
+    }
+    
+    /* reset values */
+    xDown = null;
+    yDown = null;                                             
+};

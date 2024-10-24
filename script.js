@@ -102,7 +102,6 @@ tableau.addEventListener("mouseenter",()=>{
 tableauPhone.addEventListener("click",()=>{
    btnsocialphone.classList.add("socialAnimphone")
    tableauPhone.classList.add("tableau-phone-anim")
-   stack.style.display="none"
 })
 
 
@@ -244,10 +243,11 @@ const votresujet = document.getElementById("votresujet");
 const votretexte = document.getElementById("votretexte");
 const submitcontact = document.getElementById("submitcontact");
 const logocontact = document.getElementById("logo-contact")
-
+const number = document.getElementById("number");
 votremail.style.display="none";
 votresujet.style.display="none";
 votretexte.style.display="none";
+number.style.display="none";
 submitcontact.style.display="none";
 
 logocontact.addEventListener("click",()=>{
@@ -300,9 +300,13 @@ imgMail.addEventListener("click",()=>{
       votretexte.classList.add("input-bouncing");
    },1000)
    setTimeout(()=>{
+      number.style.display="";
+     number.classList.add("input-bouncing");
+   },1500)
+   setTimeout(()=>{
       submitcontact.style.display="";
       submitcontact.classList.add("input-bouncing");
-   },1500)
+   },2000)
 
 
 })
@@ -361,6 +365,8 @@ btnwelcomePhone.addEventListener("click",()=>{
    const homi= document.getElementById("homi")
    const panda= document.getElementById("panda")
    const meteo= document.getElementById("meteo")
+   const homiP= document.getElementById("homiP")
+
 panda.classList.add("sliderOpacity");
 
    homi.addEventListener("click",()=>{
@@ -397,7 +403,6 @@ telecommande.addEventListener("click",()=>{
 
 // Swipe Phone 
 const imagesSliderPhone = document.getElementById("carrouselPhone")
-const homiP= document.getElementById("homiP")
 const pandaP= document.getElementById("pandaP")
 const meteoP= document.getElementById("meteoP")
 

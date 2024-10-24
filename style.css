@@ -871,6 +871,7 @@ display: none;
     bottom: 13vh;
     width: 250px;
     height: 100px;
+    z-index: 99999;
     cursor: pointer;
 
 }
@@ -977,7 +978,7 @@ display: none;
     transition: 1000ms;
     position: absolute;
     width: 400px;
-    height: 300px;
+    height: 350px;
     display: flex;
     padding: 0px 2rem;
     flex-direction: column;
@@ -1028,6 +1029,7 @@ display: none;
 .contact form input[type="submit"]{
     width: 50%;
     height: 1.5rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     border-radius: 5px;
     border: none;
@@ -1878,7 +1880,7 @@ footer{
     .stack-no-bounce img{
         width: 7vh;
         height: 7vh;
-    
+        z-index: 999;
         position: absolute;
         border-radius: 30px;
         border: solid 2px white;
@@ -2262,8 +2264,9 @@ footer{
         height: 1.7rem;
         border-radius: 1rem;
         border: solid 2px white ;
-        right: 0px;
+        left: 0px;
         top: -0.7rem;
+        z-index: 9999;
         background-color: rgba(32, 93, 95, 0.884);
         color: white;
         font-size: 1.5rem;
@@ -2272,12 +2275,7 @@ footer{
         align-items: center;
         position: absolute;
     }
-    .btn-close-contact:hover{
-        background-color: #ffffffe1;
-        color: #205d5fe1 ;
-        border: solid 2px #205d5fe1 ;
-    
-    }
+
     
     /* Page 2 */
     
@@ -2526,7 +2524,7 @@ footer{
         transition: 1000ms;
         position: absolute;
         width: 60%;
-        height: 300px;
+        height: 350px;
         display: flex;
         padding: 0px 2rem;
         flex-direction: column;
@@ -2577,6 +2575,7 @@ footer{
     .contact form input[type="submit"]{
         width: 50%;
         height: 1.5rem;
+        margin-top: 1rem;
         margin-bottom: 1rem;
         border-radius: 5px;
         border: none;
